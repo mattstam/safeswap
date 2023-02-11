@@ -1,8 +1,13 @@
-# [SafeSwap Module](#safeswap-module)
+# [SafeSwap](#safeswap)
 
-A [Safe Module](https://docs.gnosis-safe.io/contracts/modules-1) that allows users to submit a token swap request that may be executed by anyone on the chain. The tokens are only ever transferred to and from the Safe directly.
+A [Safe Module](https://docs.gnosis-safe.io/contracts/modules-1) that allows users to submit a token swap request that may be executed by anyone. The tokens are only ever transferred to and from their Safe wallet directly.
 
-#### [Install Foundry](#install-foundry)
+The [SwapRequest](https://github.com/mattstam/safeswap/blob/f7db5203d0e5ad0fe1b7f37c3d826bea683e77bc/src/ISwapRequester.sol#L19-L27) can then be fulfilled by [MEV Searchers](https://ethereum.org/en/developers/docs/mev/) as part of their trading strategy.
+
+Please see [DESIGN.md](DESIGN.md) for more details.
+
+### [Developer Guide](#developer-guide)
+##### [Install Foundry](#install-foundry)
 
 ```sh
 curl -L https://foundry.paradigm.xyz | bash
@@ -15,7 +20,7 @@ the latest [`forge`](https://book.getfoundry.sh/reference/forge/forge) and [`cas
 foundryup
 ```
 
-#### [Run the unit tests with Forge](#run-the-unit-tests-with-forge)
+##### [Run the unit tests with Forge](#run-the-unit-tests-with-forge)
 
 ```sh
 forge test
